@@ -12,4 +12,6 @@
 
 ```bash
 echo "hello world!"
+
+System.out.println("Hello world!");
 ```
