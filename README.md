@@ -9,3 +9,7 @@
 # will try the stash thing
 
 # again a try
+
+```bash
+echo "hello world!"
+```
