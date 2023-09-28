@@ -11,6 +11,9 @@
 # again a try
 
 ```bash
+[![Terraform](https://github.com/rishab-testing/csye6225-test/actions/workflows/tf.validate.yml/badge.svg?branch=main)](https://github.com/rishab-testing/csye6225-test/actions/workflows/tf.validate.yml)
+
+
 echo "hello world!"
 
 Testing workflow 
