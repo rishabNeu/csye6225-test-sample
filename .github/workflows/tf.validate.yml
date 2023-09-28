@@ -1,0 +1,32 @@
+name: 'Terraform'
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [ "main" ]
+
+
+jobs:
+  terraform_test:
+    name: 'Terraform Test'
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+    # Checkout the repository to the GitHub Actions runner
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v1
+      
+
+    # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
+    - name: Echo commands
+      run: echo "hello world!"
+  
+  
