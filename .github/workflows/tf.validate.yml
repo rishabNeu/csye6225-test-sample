@@ -15,8 +15,8 @@ jobs:
         image: postgres:14-alpine
         env:
           POSTGRES_USER: ${{ vars.USER }}
-          POSTGRES_PASSWORD: ${{ vars.PASSWORD }}
-          POSTGRES_DB: ${{ secrets.DB }}
+          POSTGRES_PASSWORD: ${{ secrets.PASS }}
+          POSTGRES_DB: ${{ vars.DB }}
         ports:
           - 5432:5432
         options: >-
