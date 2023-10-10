@@ -22,6 +22,9 @@ jobs:
         sudo systemctl start postgresql.service
     - name: Create db
       run : |
-        psql -h localhost -U ${{ vars.USER }} -c "CREATE DATABASE ${{ vars.DB }}"
+        sudo su postgres <<EOF
+        createdb ${{ vars.DB }}
+        psql -c "CREATE ROLE ${{ vars.USER }} WITH LOGIN PASSWORD '${{ secrets.PASSWORD}}';"
+        EOF
   
   
