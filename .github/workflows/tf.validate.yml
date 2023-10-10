@@ -10,13 +10,14 @@ jobs:
   terraform_test:
     name: 'Terraform Test'
     runs-on: ubuntu-latest
+    environment: ${{ vars.ENVIRONMENT }}
     services:
       postgres:
         image: postgres:14-alpine
         env:
-          POSTGRES_USER: root
-          POSTGRES_PASSWORD: secret
-          POSTGRES_DB: simple_bank
+          POSTGRES_USER: ${{ vars.USER }}
+          POSTGRES_PASSWORD: ${{ vars.PASSWORD }}
+          POSTGRES_DB: ${{secrets.DB}}
         ports:
           - 5432:5432
         options: >-
