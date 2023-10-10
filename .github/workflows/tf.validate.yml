@@ -17,7 +17,7 @@ jobs:
     - name: Setup Postgres
       run: |
         sudo apt-get update
-        sudo apt-get install -y postgres-client
+        sudo apt-get install -y postgresql-client
     - name: Create db
       run : |
         psql -h localhost -U ${{ vars.USER }} -c "CREATE DATABASE ${{ vars.DB }}"
