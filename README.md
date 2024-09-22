@@ -24,3 +24,5 @@ System.out.println("Hello world!!") ;
 manual edit
 
 ```
+
+CSYE6225 FAll 2024
