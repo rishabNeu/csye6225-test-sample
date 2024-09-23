@@ -30,3 +30,7 @@ CSYE6225 FAll 2024
 new change
 
 rishab 1st session.
+```
+rishab 2nd session
+
+```
